@@ -36,6 +36,11 @@ vim.opt.foldlevelstart = 99
 vim.opt.foldnestmax = 10 -- deepest fold is 10 levels
 vim.opt.foldenable = false -- don't fold by default
 vim.opt.foldlevel = 1
+-- to copy to clipboard
+vim.api.nvim_set_keymap("n", "y", '"+y', { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "Y", '"+yy', { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "p", '"+p', { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "P", '"+P', { noremap = true, silent = true })
 -- unmap a default keymapping lvim.keys.normal_mode["<C-Up>"] = ""
 -- edit a default keymapping
 -- lvim.keys.normal_mode["<C-q>"] = ":q<cr>"
